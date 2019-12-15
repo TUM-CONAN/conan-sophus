@@ -21,7 +21,6 @@ class SophusConan(ConanFile):
     description="Sophus SO3 Math library"
     
     requires = (
-        "pybind11/[>=2.2.1]@camposs/stable",
         "eigen/3.3.7@camposs/stable",
         )
 
@@ -34,6 +33,8 @@ class SophusConan(ConanFile):
 
     def _cmake_configure(self):
         cmake = CMake(self)
+        cmake.definitions['BUILD_EXAMPLES'] = 'OFF'
+        cmake.definitions['BUILD_TESTS'] = 'OFF'
         cmake.configure()
         return cmake
 
