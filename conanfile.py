@@ -34,7 +34,6 @@ class SophusConan(ConanFile):
 
     def _cmake_configure(self):
         cmake = CMake(self)
-
         cmake.configure()
         return cmake
 

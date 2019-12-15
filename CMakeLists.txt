@@ -1,4 +1,4 @@
-PROJECT(conannvpipe)
+PROJECT(conansophus)
 cmake_minimum_required(VERSION 3.8)
 include(conanbuildinfo.cmake)
 CONAN_BASIC_SETUP()
